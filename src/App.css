@@ -27,6 +27,8 @@
   align-items: flex-start;
   gap: 40px;
   padding-top: 20px;
+  /* Remove iOS Safari tap highlights on navbar */
+  -webkit-tap-highlight-color: transparent;
 }
 
 .icon-container {
@@ -40,6 +42,11 @@
   border-radius: 8px;
   transition: background-color 0.2s ease;
   position: relative;
+  /* Remove iOS Safari tap highlight */
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .lottie-icon {
