@@ -8,11 +8,10 @@ function App() {
   const lottieRefs = useRef({})
 
   const icons = [
-    { url: 'https://cdn.lottielab.com/l/BsbknMcz8YhwA0.json', id: 'icon1', title: 'Home' },
-    { url: 'https://cdn.lottielab.com/l/CMKE8u1mVDEcSn.json', id: 'icon2', title: 'Crypto' },
-    { url: 'https://cdn.lottielab.com/l/5rDnxYaiPh5HEU.json', id: 'icon3', title: 'Points' },
-    { url: 'https://cdn.lottielab.com/l/AeYHuAPMdsirVg.json', id: 'icon4', title: 'AI' },
-    { url: 'https://cdn.lottielab.com/l/ERurUcuubyYvYA.json', id: 'icon5', title: 'History' }
+    { url: '/home.json', id: 'icon1', title: 'Home' },
+    { url: '/positions.json', id: 'icon2', title: 'Positions' },
+    { url: '/points.json', id: 'icon3', title: 'Points' },
+    { url: '/account.json', id: 'icon4', title: 'Account' }
   ]
 
   // Silent auto-correction system - monitors and fixes frame positions
@@ -126,6 +125,11 @@ function App() {
                 // Silent error handling
               }}
             />
+            {icon.title === 'Positions' && (
+              <div className="notification-badge">
+                <span>8</span>
+              </div>
+            )}
             <div className={`tab-title ${index === activeTab ? 'active' : ''}`}>
               {icon.title}
             </div>
